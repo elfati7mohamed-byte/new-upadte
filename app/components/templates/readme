@@ -1,0 +1,48 @@
+//How To Use It
+//For Properties
+<DetailCard
+  item={property}
+  basePath="properties"
+  labels={{
+    stat1: "Bedrooms",
+    stat2: "Bathrooms",
+    stat3: "m²"
+  }}
+  icons={{
+    stat1: "solar:bed-linear",
+    stat2: "solar:bath-linear",
+    stat3: "lineicons:arrow-all-direction"
+  }}
+/>
+
+🌍 // For Countries
+<DetailCard
+  item={country}
+  basePath="countries"
+  labels={{
+    stat1: "Students",
+    stat2: "Universities",
+    stat3: "Population"
+  }}
+  icons={{
+    stat1: "solar:users-group-rounded-linear",
+    stat2: "solar:buildings-2-linear",
+    stat3: "solar:global-linear"
+  }}
+/>
+
+🎓 For Universities
+<DetailCard
+  item={university}
+  basePath="universities"
+  labels={{
+    stat1: "Faculties",
+    stat2: "Programs",
+    stat3: "Ranking"
+  }}
+  icons={{
+    stat1: "solar:library-linear",
+    stat2: "solar:notebook-linear",
+    stat3: "solar:star-linear"
+  }}
+/>

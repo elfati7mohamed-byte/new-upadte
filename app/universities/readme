@@ -1,0 +1,87 @@
+// template for University detail pages, e.g. /universities/cyprus-international-university
+
+
+// pages/countries/cyprus.tsx
+
+import React from "react";
+import DetailPageTemplate, { DetailPageItem } from "@/app/components/templates/DetailPageTemplate";
+
+const cyprus: DetailPageItem = {
+  name: "Cyprus international University",
+  slug: "cyprus-international-university",
+  location: "Haspolat, Cyprus",
+  rate: "Avg cost of living: €900–€1,300/mo",
+  stat1: 55000,
+  stat2: 20,
+  stat3: 1252000,
+  description:
+    "Cyprus is a popular destination for international students thanks to affordable living, English-taught programs, and a warm Mediterranean lifestyle.",
+  images: [
+    { src: "/Site-New/public/Near east 1.jpg" },
+    { src: "/Site-New/public/Near east 2.jpg" },
+    { src: "/Site-New/public/Near east 3.jpg" },
+    { src: "/Site-New/public/Near east 4.jpg" },
+  ],
+};
+
+export default function CyprusPage() {
+  return (
+    <DetailPageTemplate
+      item={cyprus}
+      basePath="universities"
+      backHref="/universities"
+      stats={{
+        stat1: { label: "Students", icon: "solar:users-group-rounded-linear" },
+        stat2: { label: "Programs", icon: "solar:book-linear" },
+        stat3: { label: "Ranking", icon: "solar:ranking-linear" },
+      }}
+      labels={{
+        backText: "Back to Universities",
+        breadcrumbBase: "universities",
+        detailsTitle: "University details",
+        offersTitle: "What this university offers",
+        mapTitle: "Location map",
+        budgetTitle: "Estimated monthly budget",
+        budgetValue: "€400 – €600",
+        budgetNote: "(rent + food + transport)",
+        ctaText: "Get in touch",
+      }}
+      features={[
+        {
+          title: "Student friendly",
+          desc: "Large international student communities and many English-taught programs.",
+          icon: "solar:users-group-rounded-linear",
+        },
+        {
+          title: "Affordable lifestyle",
+          desc: "Lower living costs compared to many EU destinations.",
+          icon: "solar:wallet-money-linear",
+        },
+        {
+          title: "Mediterranean climate",
+          desc: "Warm weather, beaches, and a relaxed lifestyle throughout the year.",
+          icon: "solar:sun-linear",
+        },
+      ]}
+      offers={[
+        { icon: "solar:book-linear", text: "English-taught programs" },
+        { icon: "solar:buildings-2-linear", text: "Modern universities" },
+        { icon: "solar:home-linear", text: "Student housing options" },
+        { icon: "solar:bus-linear", text: "City transport access" },
+        { icon: "solar:shield-check-linear", text: "Safe student cities" },
+        { icon: "solar:global-linear", text: "International communities" },
+      ]}
+      testimonial={{
+        text:
+          "I found my university path in Cyprus through this platform. The process was smooth and the housing options helped a lot.",
+        name: "Emily & John Smith",
+        role: "Student & Guardian",
+      }}
+      quickLinks={[
+        { href: "/universities?country=cyprus", text: "Browse universities" },
+        { href: "/housing?country=cyprus", text: "View housing options" },
+      ]}
+      mapSubtitle="Cyprus • Eastern Mediterranean"
+    />
+  );
+}

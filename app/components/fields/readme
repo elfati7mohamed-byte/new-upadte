@@ -1,0 +1,49 @@
+import DetailCard from "@/app/components/cards/DetailCard";
+import { universityOptions } from "@/app/data/universities";
+
+const labels = {
+  stat1: "Faculties",
+  stat2: "Programs",
+  stat3: "Ranking",
+};
+
+const icons = {
+  stat1: "solar:buildings-2-linear",
+  stat2: "solar:book-linear",
+  stat3: "solar:ranking-linear",
+};
+
+export default function UniversitiesPage() {
+  return (
+    <div className="max-w-6xl mx-auto px-4 pt-28 pb-10">
+      
+      {/* Header */}
+      <div className="text-center mb-12">
+        <p className="text-xs font-semibold tracking-widest uppercase text-black/40 dark:text-white/40">
+          Higher Education Institutions
+        </p>
+
+        <h1 className="text-4xl md:text-5xl font-extrabold text-black dark:text-white mt-3">
+          Universities
+        </h1>
+
+        <p className="text-black/60 dark:text-white/60 mt-4 max-w-2xl mx-auto">
+          Explore top universities, tuition fees, academic programs, and rankings.
+        </p>
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+        {universityOptions.map((u) => (
+          <DetailCard
+            key={u.slug}
+            item={u}
+            basePath="universities"
+            labels={labels}
+            icons={icons}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

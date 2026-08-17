@@ -1,0 +1,17 @@
+//template for card
+
+import type { DetailCardItem } from "./DetailCardItem";
+
+export const universityOptions: DetailCardItem[] = [
+  {
+    name: "Near East University",
+    slug: "near-east-university",
+    location: "Nicosia, Cyprus",
+    //rate: "€3,000 – €8,000 / year",
+    stat1: 20,
+    stat2: 220,
+    stat3: 801,
+    description:
+      "A leading private university in Cyprus offering diverse programs and modern campus facilities.",
+    images: [{ src: "/universities/neu.jpg" }],
+  }
